@@ -68,7 +68,6 @@ public final class PlayerLoginLogoutListener implements Listener {
 			}
 
 			// Notify admins for plugin updates
-			AreaShop.getInstance().notifyUpdate(player);
 			return false;
 		});
 

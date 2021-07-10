@@ -309,7 +309,8 @@ public class SignsFeature extends RegionFeature {
 				// Update the region after the event has written its lines
 				Do.sync(rent::update);
 			}
-		} else if (event.getLine(0).contains(plugin.getConfig().getString("signTags.buy"))) {
+		}
+		else if (event.getLine(0).contains(plugin.getConfig().getString("signTags.buy"))) {
 			// Check for permission
 			if (!player.hasPermission("areashop.createbuy") && !player.hasPermission("areashop.createbuy.member") && !player.hasPermission("areashop.createbuy.owner")) {
 				plugin.message(player, "setup-noPermissionBuy");
@@ -413,7 +414,8 @@ public class SignsFeature extends RegionFeature {
 				// Update the region after the event has written its lines
 				Do.sync(buy::update);
 			}
-		} else if (event.getLine(0).contains(plugin.getConfig().getString("signTags.add"))) {
+		}
+		else if (event.getLine(0).contains(plugin.getConfig().getString("signTags.add"))) {
 			// Check for permission
 			if (!player.hasPermission("areashop.addsign")) {
 				plugin.message(player, "addsign-noPermission");
