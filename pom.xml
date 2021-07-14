@@ -4,7 +4,7 @@
   <groupId>me.wiefferink</groupId>
   <artifactId>areashop-parent</artifactId>
   <packaging>pom</packaging>
-  <version>2.6.0-TI-SNAPSHOT</version>
+  <version>2.6.0-SNAPSHOT</version>
   <name>AreaShop Parent</name>
   <url>https://github.com/NLthijs48/AreaShop</url>
 
@@ -28,10 +28,6 @@
 
   <repositories>
     <repository>
-      <id>wiefferink-repo</id>
-      <url>https://maven.wiefferink.me</url>
-    </repository>
-    <repository>
       <id>enginehub-maven</id>
       <url>https://maven.enginehub.org/repo/</url>
     </repository>
@@ -42,6 +38,10 @@
     <repository>
       <id>jitpack.io</id>
       <url>https://jitpack.io</url>
+    </repository>
+    <repository>
+      <id>wiefferink-repo</id>
+      <url>http://maven.wiefferink.me</url>
     </repository>
   </repositories>
 
