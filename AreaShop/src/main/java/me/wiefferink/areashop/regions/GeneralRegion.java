@@ -652,32 +652,20 @@ public abstract class GeneralRegion implements GeneralRegionInterface, Comparabl
 				if(tp == null) {
 					return null;
 				}
-				switch(variable) {
-					case AreaShop.tagTeleportBlockX:
-						return tp.getBlockX();
-					case AreaShop.tagTeleportBlockY:
-						return tp.getBlockY();
-					case AreaShop.tagTeleportBlockZ:
-						return tp.getBlockZ();
-					case AreaShop.tagTeleportX:
-						return tp.getX();
-					case AreaShop.tagTeleportY:
-						return tp.getY();
-					case AreaShop.tagTeleportZ:
-						return tp.getZ();
-					case AreaShop.tagTeleportPitch:
-						return tp.getPitch();
-					case AreaShop.tagTeleportYaw:
-						return tp.getYaw();
-					case AreaShop.tagTeleportPitchRound:
-						return Math.round(tp.getPitch());
-					case AreaShop.tagTeleportYawRound:
-						return Math.round(tp.getYaw());
-					case AreaShop.tagTeleportWorld:
-						return tp.getWorld().getName();
-					default:
-						return null;
-				}
+				return switch (variable) {
+					case AreaShop.tagTeleportBlockX -> tp.getBlockX();
+					case AreaShop.tagTeleportBlockY -> tp.getBlockY();
+					case AreaShop.tagTeleportBlockZ -> tp.getBlockZ();
+					case AreaShop.tagTeleportX -> tp.getX();
+					case AreaShop.tagTeleportY -> tp.getY();
+					case AreaShop.tagTeleportZ -> tp.getZ();
+					case AreaShop.tagTeleportPitch -> tp.getPitch();
+					case AreaShop.tagTeleportYaw -> tp.getYaw();
+					case AreaShop.tagTeleportPitchRound -> Math.round(tp.getPitch());
+					case AreaShop.tagTeleportYawRound -> Math.round(tp.getYaw());
+					case AreaShop.tagTeleportWorld -> tp.getWorld().getName();
+					default -> null;
+				};
 		}
 	}
 
@@ -1144,7 +1132,7 @@ public abstract class GeneralRegion implements GeneralRegionInterface, Comparabl
 		} else if(result instanceof ConfigurationSection) {
 			return (ConfigurationSection)result;
 		} else {
-			return plugin.getConfig().getConfigurationSection(translateProfileName + "." + result.toString());
+			return plugin.getConfig().getConfigurationSection(translateProfileName + "." + result);
 		}
 	}
 
@@ -1274,7 +1262,7 @@ public abstract class GeneralRegion implements GeneralRegionInterface, Comparabl
 	/**
 	 * Class to store the result of a limits check.
 	 */
-	public class LimitResult {
+	public static class LimitResult {
 		private final boolean actionAllowed;
 		private final LimitType limitingFactor;
 		private final int maximum;

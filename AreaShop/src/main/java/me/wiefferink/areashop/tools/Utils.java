@@ -239,9 +239,9 @@ public class Utils {
 			if(object != null) {
 				if(first) {
 					first = false;
-					result.append(object.toString());
+					result.append(object);
 				} else {
-					result.append(", ").append(object.toString());
+					result.append(", ").append(object);
 				}
 			}
 		}
@@ -714,7 +714,6 @@ public class Utils {
 	 * @param input The input to check
 	 * @return true if the input is numeric, otherwise false
 	 */
-	@SuppressWarnings("ResultOfMethodCallIgnored")
 	public static boolean isNumeric(String input) {
 		try {
 			Integer.parseInt(input);
@@ -729,7 +728,6 @@ public class Utils {
 	 * @param input The input
 	 * @return true if the input is a double, otherwise false
 	 */
-	@SuppressWarnings("ResultOfMethodCallIgnored")
 	public static boolean isDouble(String input) {
 		try {
 			Double.parseDouble(input);
@@ -804,15 +802,13 @@ public class Utils {
 	 * @return the name of the player
 	 */
 	public static String toName(UUID uuid) {
-		if(uuid == null) {
-			return "";
-		} else {
+		if (uuid != null) {
 			String name = Bukkit.getOfflinePlayer(uuid).getName();
-			if(name != null) {
+			if (name != null) {
 				return name;
 			}
-			return "";
 		}
+		return "";
 	}
 
 	/**

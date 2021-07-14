@@ -61,7 +61,11 @@
             <version>2.2.1</version>
         </dependency>
 
-
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>21.0.1</version>
+        </dependency>
         <!-- Interfaces that specific WorldGuard and WorldEdit versions are built against -->
         <dependency>
             <groupId>me.wiefferink</groupId>

@@ -76,15 +76,13 @@ public class Analytics {
     private static RegionStateStats getStateStats() {
         RegionStateStats result = new RegionStateStats();
         for (GeneralRegion region : AreaShop.getInstance().getFileManager().getRegions()) {
-            if (region instanceof RentRegion) {
-                RentRegion rent = (RentRegion) region;
+            if (region instanceof RentRegion rent) {
                 if (rent.isAvailable()) {
                     result.forrent++;
                 } else {
                     result.rented++;
                 }
-            } else if (region instanceof BuyRegion) {
-                BuyRegion buy = (BuyRegion) region;
+            } else if (region instanceof BuyRegion buy) {
                 if (buy.isAvailable()) {
                     result.forsale++;
                 } else if (buy.isInResellingMode()) {

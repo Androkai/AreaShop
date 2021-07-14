@@ -2,6 +2,7 @@ package me.wiefferink.areashop.events;
 
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
+import org.jetbrains.annotations.NotNull;
 
 public class RegionEvent<T> extends Event {
 	protected T region;
@@ -12,6 +13,7 @@ public class RegionEvent<T> extends Event {
 	}
 
 	@Override
+	@NotNull
 	public HandlerList getHandlers() {
 		return handlers;
 	}

@@ -40,11 +40,10 @@ public class DelCommand extends CommandAreaShop {
 		}
 		if(args.length < 2) {
 			// Only players can have a selection
-			if(!(sender instanceof Player)) {
+			if(!(sender instanceof Player player)) {
 				plugin.message(sender, "cmd-weOnlyByPlayer");
 				return;
 			}
-			Player player = (Player)sender;
 			WorldEditSelection selection = plugin.getWorldEditHandler().getPlayerSelection(player);
 			if(selection == null) {
 				plugin.message(player, "cmd-noSelection");

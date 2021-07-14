@@ -37,14 +37,12 @@ public class DelfriendCommand extends CommandAreaShop {
 		if(person.hasPermission("areashop.delfriendall")) {
 			return true;
 		}
-		if(person instanceof Player) {
-			Player player = (Player)person;
+		if(person instanceof Player player) {
 			return region.isOwner(player) && player.hasPermission("areashop.delfriend");
 		}
 		return false;
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	public void execute(CommandSender sender, String[] args) {
 		if(!sender.hasPermission("areashop.delfriend") && !sender.hasPermission("areashop.delfriendall")) {

@@ -8,11 +8,7 @@ import me.wiefferink.areashop.interfaces.BukkitInterface;
 import me.wiefferink.areashop.interfaces.WorldEditInterface;
 import me.wiefferink.areashop.interfaces.WorldGuardInterface;
 import me.wiefferink.areashop.listeners.PlayerLoginLogoutListener;
-import me.wiefferink.areashop.managers.CommandManager;
-import me.wiefferink.areashop.managers.FeatureManager;
-import me.wiefferink.areashop.managers.FileManager;
-import me.wiefferink.areashop.managers.Manager;
-import me.wiefferink.areashop.managers.SignLinkerManager;
+import me.wiefferink.areashop.managers.*;
 import me.wiefferink.areashop.tools.Analytics;
 import me.wiefferink.areashop.tools.Utils;
 import me.wiefferink.bukkitdo.Do;
@@ -27,12 +23,12 @@ import org.bukkit.World;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
 import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -757,6 +753,7 @@ public final class AreaShop extends JavaPlugin implements AreaShopInterface {
      * Return the config.
      */
     @Override
+    @NotNull
     public YamlConfiguration getConfig() {
         return fileManager.getConfig();
     }

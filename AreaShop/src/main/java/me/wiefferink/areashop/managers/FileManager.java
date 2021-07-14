@@ -47,22 +47,22 @@ import java.util.regex.Pattern;
 
 public class FileManager extends Manager {
 
-	private HashMap<String, GeneralRegion> regions = null;
-	private String regionsPath = null;
-	private HashMap<String, RegionGroup> groups = null;
-	private String configPath = null;
+	private HashMap<String, GeneralRegion> regions;
+	private String regionsPath;
+	private HashMap<String, RegionGroup> groups;
+	private String configPath;
 	private YamlConfiguration config = null;
-	private String groupsPath = null;
+	private String groupsPath;
 	private YamlConfiguration groupsConfig = null;
-	private String defaultPath = null;
+	private String defaultPath;
 	private YamlConfiguration defaultConfig = null;
 	private YamlConfiguration defaultConfigFallback = null;
 	private boolean saveGroupsRequired = false;
 	private final Set<String> worldRegionsRequireSaving;
 
 	private HashMap<String, Integer> versions = null;
-	private String versionPath = null;
-	private String schemFolder = null;
+	private String versionPath;
+	private String schemFolder;
 
 	// Enum for region types
 	public enum AddResult {
@@ -97,7 +97,7 @@ public class FileManager extends Manager {
 		schemFolder = plugin.getDataFolder() + File.separator + AreaShop.schematicFolder;
 		worldRegionsRequireSaving = new HashSet<>();
 		File schemFile = new File(schemFolder);
-		if(!schemFile.exists() & !schemFile.mkdirs()) {
+		if(!schemFile.exists() && !schemFile.mkdirs()) {
 			AreaShop.warn("Could not create schematic files directory: " + schemFile.getAbsolutePath());
 		}
 		loadVersions();
@@ -444,7 +444,7 @@ public class FileManager extends Manager {
 				deleted = false;
 			}
 			if(!deleted) {
-				AreaShop.warn("File could not be deleted: " + file.toString());
+				AreaShop.warn("File could not be deleted: " + file);
 			}
 		}
 

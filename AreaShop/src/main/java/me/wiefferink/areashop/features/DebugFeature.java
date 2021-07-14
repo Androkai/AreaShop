@@ -73,7 +73,7 @@ public class DebugFeature extends RegionFeature {
 
 	@EventHandler
 	public void regionUpdate(UpdateRegionEvent event) {
-		//AreaShop.debug("UpdateRegionEvent: " + event.getRegion().getName() + " updated");
+		AreaShop.debug("UpdateRegionEvent: " + event.getRegion().getName() + " updated");
 	}
 
 	@EventHandler

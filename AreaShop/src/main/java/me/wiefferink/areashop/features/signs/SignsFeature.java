@@ -26,23 +26,17 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPhysicsEvent;
 import org.bukkit.event.block.SignChangeEvent;
-import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.world.ChunkLoadEvent;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class SignsFeature extends RegionFeature {
 
 	private static final Map<String, RegionSign> allSigns = Collections.synchronizedMap(new HashMap<>());
 	private static final Map<String, List<RegionSign>> signsByChunk = Collections.synchronizedMap(new HashMap<>());
 
-	private Map<String, RegionSign> signs;
+	private final Map<String, RegionSign> signs;
 
 	/**
 	 * Constructor.
@@ -566,7 +560,7 @@ public class SignsFeature extends RegionFeature {
 	 * @return List of signs
 	 */
 	public List<RegionSign> getSigns() {
-		return Collections.unmodifiableList(new ArrayList<>(signs.values()));
+		return List.copyOf(signs.values());
 	}
 
 	/**

@@ -44,11 +44,10 @@ public class StackCommand extends CommandAreaShop {
 			return;
 		}
 		// Only from ingame
-		if(!(sender instanceof Player)) {
+		if(!(sender instanceof final Player player)) {
 			plugin.message(sender, "cmd-onlyByPlayer");
 			return;
 		}
-		final Player player = (Player)sender;
 		// Specify enough arguments
 		if(args.length < 5) {
 			plugin.message(sender, "stack-help");

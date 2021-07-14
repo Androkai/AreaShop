@@ -29,11 +29,10 @@ public class BuyCommand extends CommandAreaShop {
 			plugin.message(sender, "buy-noPermission");
 			return;
 		}
-		if(!(sender instanceof Player)) {
+		if(!(sender instanceof Player player)) {
 			plugin.message(sender, "cmd-onlyByPlayer");
 			return;
 		}
-		Player player = (Player)sender;
 		if(args.length > 1 && args[1] != null) {
 			BuyRegion region = plugin.getFileManager().getBuy(args[1]);
 			if(region == null) {
