@@ -41,10 +41,6 @@ import java.util.UUID;
 
 public class Utils {
 
-	// Not used
-	private Utils() {
-	}
-
 	private static YamlConfiguration config;
 	private static Set<String> identifiers;
 	private static Set<String> seconds;
@@ -56,6 +52,10 @@ public class Utils {
 	private static Set<String> years;
 	private static ScriptEngine scriptEngine;
 	private static Map<Double, String> suffixes;
+
+	// Not used
+	private Utils() {
+	}
 
 	/**
 	 * Initialize the utilities class with constants.
