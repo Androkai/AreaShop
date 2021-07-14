@@ -64,11 +64,11 @@ For a preview join 'mc.go-craft.com' and go to the Survival server, the shops ar
 Old video for AreaShop v1.0: [Tutorial by VariationVault](https://www.youtube.com/watch?v=k2HMCxCCOYo)
 
 ### Required dependencies
-* Java 7 or higher (latest recommended)
-* Bukkit/Spigot 1.7.9 or higher (modded servers often include Bukkit/Spigot support, so it should also work on that, but it is not specifically tested for it)
-* [WorldGuard](http://dev.bukkit.org/bukkit-plugins/worldguard/): 5.9 or higher (6.0+ recommended)
-* [WorldEdit](http://dev.bukkit.org/bukkit-plugins/worldedit/): 5.6.3 or higher (6.0+ recommended)
-* [Vault](http://dev.bukkit.org/bukkit-plugins/vault/): 1.4.1 or higher
+* Java 8 or higher (latest recommended)
+* Bukkit/Spigot 1.16.5 or higher (modded servers often include Bukkit/Spigot support, so it should also work on that, but it is not specifically tested for it)
+* [WorldGuard](http://dev.bukkit.org/bukkit-plugins/worldguard/): 7.0 or higher (6.0+ recommended)
+* [WorldEdit](http://dev.bukkit.org/bukkit-plugins/worldedit/): 7.0 or higher (6.0+ recommended)
+* [Vault](http://dev.bukkit.org/bukkit-plugins/vault/): 1.7.3 or higher
 * An economy plugin supported by Vault (check the [Vault page](http://dev.bukkit.org/bukkit-plugins/vault/) for a list of these)
 
 ### Metrics
@@ -76,7 +76,7 @@ This plugin utilizes Hidendra's plugin metrics system, which means that the foll
 
 *A unique identifier, the server's version of Java, whether the server is in offline or online mode, the plugin's version, the server's version, the OS version/name and architecture, the core count for the CPU, the number of players online, the Metrics version.*
 
-This information will give me an indication how much the plugin is used and encourages me to continue development. Opting out of this service can be done by setting `sendStats` in the config of this plugin to `false`, if you want to disable Metrics for any plugin go to `plugins/Plugin Metrics/config.yml` and change `opt-out` to `true`. Check graphs of the statistics at this page: [mcstats.org/plugin/AreaShop](http://mcstats.org/plugin/AreaShop)
+This information will give me an indication how much the plugin is used and encourages me to continue development. Opting out of this service can be done by setting `sendStats` in the config of this plugin to `false`, if you want to disable Metrics for any plugin go to `plugins/Plugin Metrics/config.yml` and change `opt-out` to `true`. Check graphs of the statistics at this page: [https://bstats.org/plugin/bukkit/AreaShop/32](https://bstats.org/plugin/bukkit/AreaShop/32)
 
 ### Do you want to translate AreaShop?
 Help translating the plugin into different languages and to keep the translations up to date. Go to [this page](https://github.com/NLthijs48/AreaShop/wiki/Language-support#translating-on-transifex) for more information. Translating goes through the [Transifex](https://www.transifex.com/projects/p/areashop/) website and is very easy, sending files back and forth is not needed, you can translate lines online and whenever you want. Every line you translate will be saved, no need to do it all at once (this also allows for easy collaboration).
