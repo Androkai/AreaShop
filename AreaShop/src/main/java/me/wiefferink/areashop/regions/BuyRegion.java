@@ -256,7 +256,6 @@ public class BuyRegion extends GeneralRegion {
 	 * @param offlinePlayer The player that wants to buy the region
 	 * @return true if it succeeded and false if not
 	 */
-	@SuppressWarnings("deprecation")
 	public boolean buy(OfflinePlayer offlinePlayer) {
 		// Check if the player has permission
 		if(!plugin.hasPermission(offlinePlayer, "areashop.buy")) {
@@ -448,7 +447,6 @@ public class BuyRegion extends GeneralRegion {
 	 * @param executor      CommandSender to receive a message when the sell fails, or null
 	 * @return true if the region has been sold, otherwise false
 	 */
-	@SuppressWarnings("deprecation")
 	public boolean sell(boolean giveMoneyBack, CommandSender executor) {
 		boolean own = executor instanceof Player && this.isBuyer((Player)executor);
 		if(executor != null) {
