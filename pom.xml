@@ -26,6 +26,13 @@
     <url>https://jenkins.wiefferink.me/job/AreaShop</url>
   </ciManagement>
 
+  <pluginRepositories>
+    <pluginRepository>
+      <id>apache-snapshot-repo</id>
+      <url>https://repository.apache.org/content/repositories/snapshots/</url>
+    </pluginRepository>
+  </pluginRepositories>
+
   <repositories>
     <repository>
       <id>enginehub-maven</id>
