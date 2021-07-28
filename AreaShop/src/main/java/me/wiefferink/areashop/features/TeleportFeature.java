@@ -148,7 +148,12 @@ public class TeleportFeature extends RegionFeature {
 
 		// Tracking of which sides to continue the search
 		boolean done = isSafe(safeLocation);
-		boolean northDone = false, eastDone = false, southDone = false, westDone = false, topDone = false, bottomDone = false;
+		boolean northDone = false;
+		boolean eastDone = false;
+		boolean southDone = false;
+		boolean westDone = false;
+		boolean topDone = false;
+		boolean bottomDone = false;
 		boolean continueThisDirection;
 
 		while((blocksInRegion || !insideRegion) && !done) {
