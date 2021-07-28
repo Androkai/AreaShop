@@ -3,6 +3,7 @@ package me.wiefferink.areashop.tools;
 import me.wiefferink.areashop.AreaShop;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.Tag;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -11,9 +12,8 @@ import java.util.List;
 public class Materials {
 
 	private Materials() {
-
 	}
-
+	//Tag.WALL_SIGNS
 	private static final HashSet<String> WALL_SIGN_TYPES = new HashSet<>(Arrays.asList(
 		// 1.14+ types
 		"ACACIA_WALL_SIGN",
@@ -27,6 +27,7 @@ public class Materials {
 		"LEGACY_WALL_SIGN",
 		"WALL_SIGN"
 	));
+	//Tag.WALL_SIGNS
 	private static final HashSet<String> FLOOR_SIGN_TYPES = new HashSet<>(Arrays.asList(
 		// 1.14+ types
 		"ACACIA_SIGN",
@@ -63,6 +64,7 @@ public class Materials {
 	 * Get material based on a sign material name.
 	 * @param name Name of the sign material
 	 * @return null if not a sign, otherwise the material matching the name (when the material is not available on the current minecraft version, it returns the base type)
+	 * TODO, since we no longer support old versions, we can remove support for legacy items
 	 */
 	public static Material signNameToMaterial(String name) {
 		// Expected null case
