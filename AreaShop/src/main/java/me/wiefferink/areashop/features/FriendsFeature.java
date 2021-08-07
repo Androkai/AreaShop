@@ -19,6 +19,8 @@ public class FriendsFeature extends RegionFeature {
 		setRegion(region);
 	}
 
+	public FriendsFeature() {}
+
 	/**
 	 * Add a friend to the region.
 	 * @param player The UUID of the player to add

@@ -36,7 +36,9 @@ public class SignsFeature extends RegionFeature {
 	private static final Map<String, RegionSign> allSigns = Collections.synchronizedMap(new HashMap<>());
 	private static final Map<String, List<RegionSign>> signsByChunk = Collections.synchronizedMap(new HashMap<>());
 
-	private final Map<String, RegionSign> signs;
+	private Map<String, RegionSign> signs;
+
+	public SignsFeature() {}
 
 	/**
 	 * Constructor.

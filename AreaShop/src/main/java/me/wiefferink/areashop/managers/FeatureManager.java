@@ -49,6 +49,7 @@ public class FeatureManager extends Manager {
 				AreaShop.error("Failed to instantiate global feature:", clazz, e);
 			} catch(NoSuchMethodException e) {
 				// Feature does not have a global part
+				AreaShop.error("Feature ", clazz.getName(), " is missing an empty constructor.");
 			}
 		}
 
